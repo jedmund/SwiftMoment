@@ -412,13 +412,13 @@ public func minimum(_ moments: Moment...) -> Moment? {
 /// It wraps a Foundation `Date`, a `TimeZone` and a `Locale` value.
 /// To create one of these values, call one of the `moment()` family of functions.
 public struct Moment: Comparable {
-    internal static let minuteInSeconds: Double = 60
-    internal static let hourInSeconds: Double = 3600
-    internal static let dayInSeconds: Double = 86400
-    internal static let weekInSeconds: Double = 604800
-    internal static let monthInSeconds: Double = 2592000
-    internal static let quarterInSeconds: Double = 7776000
-    internal static let yearInSeconds: Double = 31536000
+    public static let minuteInSeconds: Double = 60
+    public static let hourInSeconds: Double = 3600
+    public static let dayInSeconds: Double = 86400
+    public static let weekInSeconds: Double = 604800
+    public static let monthInSeconds: Double = 2592000
+    public static let quarterInSeconds: Double = 7776000
+    public static let yearInSeconds: Double = 31536000
 
     /// The Date wrapped by this value.
     public let date: Date

@@ -97,13 +97,13 @@ extension Moment {
         return stringFromFormat("%%d %@years ago", withValue: Int(value))
     }
 
-    private func stringFromFormat(_ format: String, withValue value: Int) -> String {
+    public func stringFromFormat(_ format: String, withValue value: Int) -> String {
         let localeFormat = String(format: format,
                                   getLocaleFormatUnderscoresWithValue(Double(value)))
         return String(format: NSDateTimeAgoLocalizedStrings(localeFormat), value)
     }
 
-    private func NSDateTimeAgoLocalizedStrings(_ key: String) -> String {
+    public func NSDateTimeAgoLocalizedStrings(_ key: String) -> String {
         // get framework bundle
         guard let bundleIdentifier = Bundle(for: MomentBundle.self).bundleIdentifier  else {
             return ""
